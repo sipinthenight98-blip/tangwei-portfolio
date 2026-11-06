@@ -53,3 +53,15 @@ zoomable.forEach(image => {
 });
 lightbox?.querySelector('button')?.addEventListener('click', () => lightbox.close());
 lightbox?.addEventListener('click', event => { if (event.target === lightbox) lightbox.close(); });
+
+const pinkProductImage = document.querySelector('.pink-product img');
+if (pinkProductImage) {
+  const officialVisual = new Image();
+  officialVisual.onload = () => {
+    pinkProductImage.src = officialVisual.src;
+    pinkProductImage.alt = 'PinkPunch 官网场景化产品视觉';
+    const credit = document.querySelector('.pink-product small');
+    if (credit) credit.textContent = '图片来源：PinkPunch 官网';
+  };
+  officialVisual.src = 'https://www.pinkpunch.com/cdn/shop/files/20.png?v=1724318855&width=1080';
+}
