@@ -36,7 +36,7 @@ addEventListener('pagehide', () => { if (filmObjectUrl) URL.revokeObjectURL(film
 
 const lightbox = document.getElementById('lightbox');
 const lightboxImage = lightbox?.querySelector('img');
-const zoomable = document.querySelectorAll('.star-gallery img, .pink-grid > img, .product-stack img, .unomi-grid img, .xhs-gallery img, .agency-products img');
+const zoomable = document.querySelectorAll('.star-gallery img, .pink-grid > img, .product-stack img, .unomi-grid img, .xhs-gallery img');
 zoomable.forEach(image => {
   image.tabIndex = 0;
   image.setAttribute('role', 'button');
